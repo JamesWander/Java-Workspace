@@ -1,0 +1,77 @@
+package view;
+
+import java.awt.Image;
+import java.util.Random;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class MoverCarro extends Thread implements Runnable{
+	
+	private JLabel lblCarro;
+	private Random gerador = new Random();
+	private int distancia = 0;
+	private int nCarro;
+	public MoverCarro(JLabel carro, int nCarro)
+	{
+		this.lblCarro = carro;
+	}
+
+	public void run()
+	{
+		try {
+			MoverCarros();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void MoverCarros() throws InterruptedException
+	{
+		int px = lblCarro.getX();
+		int py = lblCarro.getY();
+		int sx = lblCarro.getWidth();
+		int sy = lblCarro.getHeight();
+		
+		for(int i = 0; i<= 225; i++)
+		{
+			
+			if(nCarro == 1)
+			{
+				lblCarro.setLocation(px+(i/2), py-i);
+				lblCarro.setSize(sx-(i/2), sy-(i/2));
+				ajustaImagen();
+			
+				Thread.sleep(gerador.nextInt(50));
+			}
+		}
+		
+		/*while(distancia <= 210)
+		{
+			int i = gerador.nextInt(10) + distancia;
+			lblCarro.setLocation(px+(i/2), py-i);
+			lblCarro.setSize(sx-(i/2), sy-(i/2));
+			ajustaImagen();				
+			Thread.sleep(100);
+			
+			distancia += i;
+		}*/
+		
+		
+		/*int i = 210;
+		lblCarro.setLocation(px+(i/2), py-i);
+		lblCarro.setSize(sx-(i/2), sy-(i/2));
+		ajustaImagen();				*/
+		
+	}
+	
+	public void ajustaImagen()
+	{
+		ImageIcon carro = new ImageIcon("C:\\Users\\James Wander\\Pictures\\carro 1.png");
+		Image img = carro.getImage();
+		Image novaimg = img.getScaledInstance(lblCarro.getWidth(), lblCarro.getHeight(), Image.SCALE_SMOOTH);
+		ImageIcon image = new ImageIcon(novaimg);
+		lblCarro.setIcon(image);
+	}
+}

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-16T01:34:01 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioLocacoes" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="51c68a39-6c64-43d1-adaf-e176db39faab">
+	<property name="template.engine" value="tabular_template"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db_locadora"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Transparent" forecolor="#B89F7D" backcolor="#70A9C6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="tableDataset" uuid="a559ccff-a970-41a9-8e6d-11c5a24fce12">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db_locadora"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value="ZGJfbG9jYWRvcmEudGJsX3RpdHVsb3MgQVMgLDI2MiwxMjksYzFmOGFjZTQtYTdmMi00YzdjLWI1&#xA;NTctOGUzZWM2ZTdlYjFmOw=="/>
+		<queryString language="SQL">
+			<![CDATA[SELECT db_locadora.tbl_titulos.codigo,
+	db_locadora.tbl_titulos.nome,
+	db_locadora.tbl_titulos.valor,
+	db_locadora.tbl_titulos.categoria,
+	db_locadora.tbl_titulos.censura,
+	db_locadora.tbl_titulos.lancamento
+FROM db_locadora.tbl_titulos]]>
+		</queryString>
+		<field name="codigo" class="java.lang.Integer"/>
+		<field name="nome" class="java.lang.String"/>
+		<field name="valor" class="java.math.BigDecimal"/>
+		<field name="categoria" class="java.lang.String"/>
+		<field name="censura" class="java.lang.String"/>
+		<field name="lancamento" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="290" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="-20" y="-20" width="595" height="80" uuid="be36d21e-4694-443f-8b57-fef49e669398"/>
+				<imageExpression><![CDATA["imgs/header.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="-11" y="-10" width="263" height="33" uuid="e59185d1-6a86-45db-a9af-7de38f04e8d9"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Soul Movie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="60" y="30" width="220" height="22" forecolor="#FFFFFF" uuid="dc12c430-5c64-4787-9dca-1a76029505e8"/>
+				<textElement textAlignment="Right">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Titulos]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="1" y="80" width="553" height="140" uuid="ee1124d9-c5f4-4388-9229-31c0c73cf3fc">
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="Blank">
+					<datasetRun subDataset="tableDataset" uuid="d1ebcf10-3535-4f20-9f4b-574128a0f90c">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="70" uuid="dd561542-eecc-40de-a2fd-87a32af2356b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement key="" mode="Opaque" x="0" y="0" width="70" height="40" forecolor="#000000" backcolor="#ABABAB" uuid="2dee00ee-de5f-4e2a-9945-e8520ed4addc"/>
+								<box padding="2">
+									<pen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Codigo]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Detail" x="0" y="0" width="70" height="30" uuid="4278bfea-b24c-4aa4-b10e-5aa1343d8ff3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="cab9aee5-59c7-411e-aab6-07ed6f7b4520">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement key="" mode="Opaque" x="0" y="0" width="90" height="40" forecolor="#000000" backcolor="#ABABAB" uuid="3673934e-070e-4be4-b03e-067d998fff7a"/>
+								<box padding="2">
+									<pen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Nome do Filme]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Detail" x="0" y="0" width="90" height="30" uuid="dace065b-4ea0-4e63-a08f-d667ef9e572f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="d501d87e-c996-4fa0-8bad-513c4e84b0cd">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement key="" mode="Opaque" x="0" y="0" width="100" height="40" forecolor="#000000" backcolor="#ABABAB" uuid="3a30c0b8-6d18-46fc-a686-b050c0f3ad1c"/>
+								<box padding="2">
+									<pen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Preço do Filme]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Detail" x="0" y="0" width="100" height="30" uuid="05ea04d3-2561-47ad-8d3e-460c0aa954c9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="d0c7f091-ec52-4e42-9bd3-312dcf89407c">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement key="" mode="Opaque" x="0" y="0" width="110" height="40" forecolor="#000000" backcolor="#ABABAB" uuid="3c315c0e-89ff-4e02-abb4-23f76a83a97c"/>
+								<box padding="2">
+									<pen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Categoria]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Detail" x="0" y="0" width="110" height="30" uuid="4cb18ab1-6e91-4c42-87c2-8a0cd466ae8c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{categoria}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="5c8970f6-b006-4661-a3a6-6cb137d031ea">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader style="Table_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement key="" mode="Opaque" x="0" y="0" width="100" height="40" forecolor="#000000" backcolor="#ABABAB" uuid="dfb8222f-6d3c-44a3-b92b-388101984386"/>
+								<box padding="2">
+									<pen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Censura]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Detail" x="0" y="0" width="100" height="30" uuid="5f342da3-712d-42c7-b13c-94b4a840be5c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{censura}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="83" uuid="646317c1-ea09-4c7a-aaf4-9942a937de1e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:tableHeader style="Table_TH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement key="" mode="Opaque" x="0" y="0" width="83" height="40" forecolor="#000000" backcolor="#ABABAB" uuid="50d81bea-d054-421b-bd31-abbe03c820c0"/>
+								<box padding="2">
+									<pen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="13" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Data de Lançamento]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="Detail" x="0" y="0" width="83" height="30" uuid="b3c078ee-d30c-481c-a6c9-e007988d7ee0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{lancamento}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<image scaleImage="FillFrame">
+				<reportElement x="460" y="-11" width="107" height="62" uuid="63671798-1c96-492f-b069-7836e45c32eb"/>
+				<imageExpression><![CDATA["imgs/LogoProvavelFinal.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="1" y="0" width="197" height="20" uuid="69d3edaf-4e7a-49f5-b69c-ff6733ff37d0"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Column header" x="430" y="0" width="80" height="20" uuid="abb33244-eb48-4ef5-ab27-35aa4637881d"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="510" y="0" width="40" height="20" uuid="fe52d68f-779b-4d19-9288-969eaa490718"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

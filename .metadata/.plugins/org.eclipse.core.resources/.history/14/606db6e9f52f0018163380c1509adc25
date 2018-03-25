@@ -1,0 +1,40 @@
+package controller;
+
+import java.util.concurrent.Semaphore;
+
+public class ThreadCarros {
+
+	private String[] direcao = {"Sul","Norte","Leste","Oeste"};
+	private int indopara; 
+	private Semaphore semaforo;
+	
+	public ThreadCarros(int indopara,Semaphore semaforo) 
+	{
+		this.indopara = indopara;
+		this.semaforo = semaforo;
+	}
+	
+	public void run()
+	{
+		chegando();
+		try
+		{
+			
+		}
+		catch(InterruptedException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	private void andando()
+	{
+		
+	}
+	
+	private void chegando()
+	{
+		
+	}
+
+}

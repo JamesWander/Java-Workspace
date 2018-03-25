@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
+	<classpathentry kind="lib" path="G:/Pendrive/Coisas/Fatec/Outros/Outros/Locadora/com.lowagie.text-2.1.7.jar"/>
+	<classpathentry kind="lib" path="G:/Pendrive/Coisas/Fatec/Outros/Outros/Locadora/commons-beanutils-core-1.8.0.jar"/>
+	<classpathentry kind="lib" path="G:/Pendrive/Coisas/Fatec/Outros/Outros/Locadora/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="G:/Pendrive/Coisas/Fatec/Outros/Outros/Locadora/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="G:/Pendrive/Coisas/Fatec/Outros/Outros/Locadora/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="G:/Pendrive/Coisas/Fatec/Outros/Outros/Locadora/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="G:/Pendrive/Coisas/Fatec/Outros/Outros/Locadora/jasperreports-6.1.0.jar"/>
+	<classpathentry kind="lib" path="G:/Pendrive/Coisas/Fatec/Outros/Outros/Locadora/mysql-connector-java-5.1.27-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

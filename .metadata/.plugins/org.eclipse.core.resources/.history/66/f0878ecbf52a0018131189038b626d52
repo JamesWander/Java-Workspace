@@ -1,0 +1,46 @@
+package controller;
+
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
+public class ThreadRoleta extends Thread{
+
+	private JTextField roleta;
+	private JButton jogar;
+	private Random gerador = new Random();
+	private static int terminou;
+	
+	public ThreadRoleta(JTextField roleta,JButton jogar)
+	{
+		this.roleta = roleta;
+		this.jogar = jogar;
+	}
+	
+	public void run()
+	{
+		sortearnumero();
+	}
+	
+	private void sortearnumero()
+	{
+		int ate = gerador.nextInt(150);
+		
+		for(int i = 0; i <= ate; i++)
+		{
+			roleta.setText(String.valueOf(gerador.nextInt(6)+1));
+			
+			try 
+			{
+				Thread.sleep(50);
+			} catch (InterruptedException e) {}
+		}
+		terminou++;
+		if(terminou >=3)
+		{
+			jogar.setVisible(true);
+		}
+	}
+	
+}

@@ -1,0 +1,15 @@
+package controller;
+
+public class ThreadSemaforo {
+
+	private String[] direcao = {"Sul","Norte","Leste","Oeste"};
+	private int indopara; 
+	
+	public ThreadSemaforo(int indopara) 
+	{
+		this.indopara = indopara;
+	}
+	
+	private
+
+}

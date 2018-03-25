@@ -1,0 +1,18 @@
+package view;
+
+public class SemaforoTransito {
+
+	public static void main(String[] args) {
+		
+		String[] direcao = {"Sul","Norte","Leste","Oeste"};
+		
+		ThreadSemaforo semaforo;
+		
+		for(int i = 0; i <= 3; i++)
+		{
+			
+		}
+		
+	}
+	
+}

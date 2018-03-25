@@ -1,0 +1,22 @@
+package view;
+
+import java.util.concurrent.Semaphore;
+
+import controller.ThreadCarros;
+
+public class SemaforoTransito {
+
+	public static void main(String[] args) {
+		
+		String[] direcao = {"Sul","Norte","Leste","Oeste"};
+		ThreadCarros carros;
+		Semaphore semaforo = new Semaphore(1);
+		
+		for(int i = 0; i <= 3; i++)
+		{
+			carros = new ThreadCarros(i,semaforo);
+		}
+		
+	}
+	
+}

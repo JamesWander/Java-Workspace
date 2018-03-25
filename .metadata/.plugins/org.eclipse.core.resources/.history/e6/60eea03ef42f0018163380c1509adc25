@@ -1,0 +1,15 @@
+package controller;
+
+public class ThreadCarros {
+
+	private String[] direcao = {"Sul","Norte","Leste","Oeste"};
+	private int indopara; 
+	
+	public ThreadCarros(int indopara) 
+	{
+		this.indopara = indopara;
+	}
+	
+	private
+
+}

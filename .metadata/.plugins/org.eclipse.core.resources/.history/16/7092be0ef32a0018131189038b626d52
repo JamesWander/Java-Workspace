@@ -1,0 +1,12 @@
+package controller;
+
+public class ThreadRoleta extends Thread{
+
+	JTextfield roleta;
+	
+	public ThreadRoleta(JTextf)
+	{
+		
+	}
+	
+}

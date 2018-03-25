@@ -1,0 +1,33 @@
+package controller;
+
+import java.util.Random;
+
+public class ThreadSapo extends Thread {
+
+	private int sapo;
+	private int posicao = 0;
+	private int pulo;
+	Random gerador = new Random();
+	
+	public ThreadSapo(int sapo)
+	{
+		this.sapo = sapo;
+	}
+	
+	public void run()
+	{
+		movimentaSapo();
+	}
+	
+	private void movimentaSapo()
+	{
+		pulo = gerador.nextInt(100);
+		posicao += pulo;
+		System.out.println("O Sapo " + sapo + " deu um pulo de " + pulo + " centimetros");
+		if(posicao >= 1000)
+		{
+			System.out.println("O Sapo "+ sapo +" Chegou ao final da pista");
+		}
+	}
+	
+}

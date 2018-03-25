@@ -1,0 +1,19 @@
+package controller;
+
+import java.util.concurrent.Semaphore;
+
+public class ThreadCarros {
+
+	private String[] direcao = {"Sul","Norte","Leste","Oeste"};
+	private int indopara; 
+	private Semaphore semaforo;
+	
+	public ThreadCarros(int indopara,Semaphore semaforo) 
+	{
+		this.indopara = indopara;
+		this.Semaphore = semaforo;
+	}
+	
+	private
+
+}

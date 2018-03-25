@@ -1,0 +1,14 @@
+package controller;
+
+public class ThreadCar extends Thread {
+
+	public ThreadCar ()
+	{
+		
+	}
+	
+	public run()
+	{
+		
+	}
+}

@@ -1,0 +1,14 @@
+package controller;
+
+import javax.swing.JTextField;
+
+public class ThreadRoleta extends Thread{
+
+	JTextField roleta;
+	
+	public ThreadRoleta(JTextField roleta)
+	{
+		this.roleta = roleta;
+	}
+	
+}

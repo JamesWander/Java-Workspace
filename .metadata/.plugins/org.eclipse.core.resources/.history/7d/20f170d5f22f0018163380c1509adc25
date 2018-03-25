@@ -1,0 +1,12 @@
+package controller;
+
+public class ThreadSemaforo {
+
+	String[] direcao = {"Sul","Norte","Leste","Oeste"};
+	
+	public ThreadSemaforo(int i) 
+	{
+		
+	}
+
+}

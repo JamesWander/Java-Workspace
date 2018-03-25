@@ -1,0 +1,25 @@
+package controller;
+
+import javax.swing.JTextField;
+
+public class ThreadRoleta extends Thread{
+
+	JTextField roleta;
+	Random gerador = new Random();
+	
+	public ThreadRoleta(JTextField roleta)
+	{
+		this.roleta = roleta;
+	}
+	
+	public void run()
+	{
+		sortearnumero();
+	}
+	
+	private void sortearnumero()
+	{
+		for(int i = 1; i <= )
+	}
+	
+}

@@ -1,0 +1,118 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import controller.ThreadRoleta;
+
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+
+public class tela extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField Txn1;
+	private JTextField Txn2;
+	private JTextField Txn3;
+	private ThreadRoleta thread;
+	private JButton btnJogar;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					tela frame = new tela();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public tela() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 525, 360);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		Txn1 = new JTextField();
+		Txn1.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		Txn1.setHorizontalAlignment(SwingConstants.CENTER);
+		Txn1.setEditable(false);
+		Txn1.setBounds(70, 95, 86, 57);
+		contentPane.add(Txn1);
+		Txn1.setColumns(10);
+		
+		Txn2 = new JTextField();
+		Txn2.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		Txn2.setHorizontalAlignment(SwingConstants.CENTER);
+		Txn2.setEditable(false);
+		Txn2.setColumns(10);
+		Txn2.setBounds(209, 95, 86, 57);
+		contentPane.add(Txn2);
+		
+		Txn3 = new JTextField();
+		Txn3.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		Txn3.setHorizontalAlignment(SwingConstants.CENTER);
+		Txn3.setEditable(false);
+		Txn3.setColumns(10);
+		Txn3.setBounds(346, 95, 86, 57);
+		contentPane.add(Txn3);
+		
+		btnJogar = new JButton("Jogar");
+		btnJogar.setBounds(206, 220, 89, 49);
+		btnJogar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				jogar();
+				
+			}
+		});
+		contentPane.add(btnJogar);
+		
+	}
+	
+	public void jogar()
+	{
+		thread = new ThreadRoleta(Txn1);
+		thread.start();
+		
+		thread = new ThreadRoleta(Txn2);
+		thread.start();
+		
+		thread = new ThreadRoleta(Txn3);
+		thread.start();
+		
+		btnJogar.setVisible(false);
+		
+		if(!thread.isAlive())
+		{
+			btnJogar.setVisible(true);
+		}
+	}
+	
+	
+	
+	
+	
+	
+}

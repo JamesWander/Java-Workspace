@@ -1,0 +1,21 @@
+package controller;
+
+import java.util.concurrent.Semaphore;
+
+public class ThreadCar extends Thread {
+
+	private int idCar;
+	private static int posChegada;
+	private static int posSaida;
+	private Semaphore semaforo;
+	
+	public ThreadCar ()
+	{
+		
+	}
+	
+	public void run()
+	{
+		
+	}
+}
