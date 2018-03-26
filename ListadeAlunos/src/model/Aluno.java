@@ -1,3 +1,4 @@
+package model;
 /*
  * 	Classe que mantem dados e operaçoes para alunos
  * @author James Wander
@@ -24,7 +25,7 @@ public class Aluno {
 	 * @return é uma string com valor dos atributos
 	 */
 	public String toString() {
-		return "nome " + nome + ", ra " + ra + "\n";
+		return "Nome: " + nome + ", RA: " + ra + "\n";
 	}
 	
 	

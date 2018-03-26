@@ -1,4 +1,7 @@
+package view;
 import javax.swing.JOptionPane;
+
+import controller.ListaDeInteiros;
 
 
 public class TesteMenu {
@@ -6,7 +9,7 @@ public class TesteMenu {
 	public static void main(String[] args) {
 		int op = 0;
 		ListaDeInteiros lista1 = new ListaDeInteiros(4);
-		int valor;
+		int valor,posicao;
 		
 		do
 		{
@@ -26,7 +29,9 @@ public class TesteMenu {
 					break;
 					
 				case 3:
-					JOptionPane.showMessageDialog(null, "Opção em implementação");
+					valor = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero para adicionar a lista"));
+					posicao = Integer.parseInt(JOptionPane.showInputDialog("Digite a posição que deseja adicionar"));
+					lista1.adicionaEspecifico(valor, posicao);
 					break;
 					
 				case 4:
@@ -36,7 +41,7 @@ public class TesteMenu {
 					}
 					else
 					{
-						JOptionPane.showMessageDialog(null, "O Numero " + lista1.removeInicio() + " foi removido");
+						JOptionPane.showMessageDialog(null, "O Numero " + lista1.removeInicio());
 					}
 					break;
 					
@@ -52,15 +57,16 @@ public class TesteMenu {
 					break;
 					
 				case 6:
-					JOptionPane.showMessageDialog(null, "Opção em implementação");
+					posicao = Integer.parseInt(JOptionPane.showInputDialog("Digite a posição que deseja Remover"));
+					lista1.removeEspecifico(posicao);
 					break;
 					
 				case 7:
-					JOptionPane.showMessageDialog(null, "Opção em implementação");
+					JOptionPane.showMessageDialog(null, "O primeiro numero é " + lista1.ObtemPrimeiro());
 					break;
 					
 				case 8:
-					JOptionPane.showMessageDialog(null, "Opção em implementação");
+					JOptionPane.showMessageDialog(null, "O ultimo numero é " + lista1.ObtemUltimo());
 					break;
 					
 				case 9:

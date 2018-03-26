@@ -1,3 +1,4 @@
+package controller;
 /**
  * Lista de Números inteiros
  * @author James Wander Ferreira de Souza Junior
@@ -126,6 +127,7 @@ public class ListaDeInteiros {
 	}
 
 	public int ObtemUltimo()
+
 	{
 		int r = -1;
 		if(vazia())
@@ -138,19 +140,57 @@ public class ListaDeInteiros {
 		}
 		return r;
 	}
+	
+
 	public void adicionaEspecifico(int valor, int posicao)
 	{
-		if(cheia())
+		if(!cheia())
 		{
-			if(posicao >= 1 && posicao <=tamanho + 1)
+			if(posicao >= 1 && posicao <= tamanho)
 			{
-				for(int i = tamanho; i > posicao; i--)
+				for(int i = tamanho; i >= posicao; i--)
 				{
 					dados[i] = dados[i-1];
+					
 				}
 				dados[posicao-1] = valor;
-				
+				tamanho++;
 			}
 		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "Lista Cheia");
+		}
+	}
+	
+	public int removeEspecifico(int posicao)
+	{
+		int r = -1;
+		
+		if(!vazia())
+		{
+			if(posicao >= 1 && posicao <= tamanho)
+			{
+				r = dados[posicao - 1];
+				for(int i = posicao; i < tamanho; i++)
+				{
+					dados[i-1] = dados[i];
+				}
+				tamanho--;
+			}
+		}
+		
+		return r;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
