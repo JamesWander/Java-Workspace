@@ -14,7 +14,7 @@ public class ServerTCP {
 		{
 			ServerSocket servidor = new ServerSocket(17777);
 			System.out.println("Listening na porta 17777");
-			
+			String asd = JOptionPane.showInputDialog("Digite a mensagen");
 			while(true)
 			{
 				//aceita a conexao do usuario
@@ -26,8 +26,9 @@ public class ServerTCP {
 				//????????
 				ObjectOutputStream said = new ObjectOutputStream(cliente.getOutputStream());
 				
+				
 				said.flush();
-				said.writeObject(new Date());
+				said.writeObject(asd);
 				said.close();
 				cliente.close();
 				
@@ -35,7 +36,7 @@ public class ServerTCP {
 		}
 		catch(Exception e)
 		{
-			JOptionPane.showMessageDialog(null, e);
+			JOptionPane.showMessageDialog(null, "Server"+e);
 		}
 		
 	}
